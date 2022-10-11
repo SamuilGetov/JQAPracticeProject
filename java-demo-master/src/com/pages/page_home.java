@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class page_home {
 
-    private String baseUrl = "https://demoqa.com";
+    private String baseUrl = "https://robotsparebinindustries.com/";
     private By elementsButtonLocator = By.xpath("//*[@class='category-cards']/div[1]");
 
 
