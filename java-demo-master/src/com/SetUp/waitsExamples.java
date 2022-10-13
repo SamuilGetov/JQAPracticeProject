@@ -1,4 +1,4 @@
-package com.custom;
+package com.SetUp;
 
 
 import org.openqa.selenium.By;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class waits {
+public class waitsExamples {
 
     public void customWait(WebDriver driver, Duration timeout, String condition, By locator) {
         switch(condition) {
