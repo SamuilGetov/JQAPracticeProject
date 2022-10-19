@@ -3,7 +3,10 @@ package com.Tests;
 import com.SetUp.driverSetUp;
 import com.elementsLocators.homePageElements;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
+import java.sql.SQLOutput;
 
 import static org.junit.Assert.fail;
 
@@ -15,8 +18,9 @@ public class NegativeScenariosTests extends driverSetUp {
         System.out.println("Test Executed: " + Thread.currentThread().getStackTrace()[1].getMethodName());
         openWEBPage();
         homePageElements.logInButton(driver).click();
-        Thread.sleep(5000);
-        //TODO Assertion
+        Thread.sleep(3000);
+//        String asd = driver.findElement(By.linkText("Please fill out this field.")).getText();
+//        System.out.println(asd);
 
     }
 

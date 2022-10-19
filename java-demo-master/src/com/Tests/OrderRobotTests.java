@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class OrderRobotTests extends driverSetUp {
+    private By elementsButtonLocator = By.xpath("//button[@id='order']");
 
     @Test(priority = 1)
     public void enterRobotOrderPage() throws InterruptedException {
@@ -50,7 +51,8 @@ public class OrderRobotTests extends driverSetUp {
         orderRobotElements.modelInfoTable(driver).isDisplayed();
 
     }
-    @Test(priority = 3,dependsOnMethods = "simpleRobotBuild")
+
+    @Test(priority = 3, dependsOnMethods = "simpleRobotBuild")
     public void placeAnOrder() throws InterruptedException {
         System.out.println("Test Executed: " + Thread.currentThread().getStackTrace()[1].getMethodName());
         orderRobotElements.orderButton(driver).click();
@@ -58,7 +60,7 @@ public class OrderRobotTests extends driverSetUp {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"receipt\"]")));
         orderRobotElements.receipt(driver).isDisplayed();
         orderRobotElements.orderAnotherRobotButton(driver).click();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@id='order']")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(elementsButtonLocator));
         orderRobotElements.orderButton(driver).isDisplayed();
     }
 }
