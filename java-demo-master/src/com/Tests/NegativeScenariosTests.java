@@ -2,13 +2,7 @@ package com.Tests;
 
 import com.SetUp.driverSetUp;
 import com.elementsLocators.homePageElements;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-
-import java.sql.SQLOutput;
-
-import static org.junit.Assert.fail;
 
 public class NegativeScenariosTests extends driverSetUp {
 
@@ -25,7 +19,7 @@ public class NegativeScenariosTests extends driverSetUp {
     }
 
     @Test(priority = 2)
-    public void invalidCredentialsTest() throws InterruptedException {
+    public void invalidCredentialsTest() {
         System.out.println("Test Executed: " + Thread.currentThread().getStackTrace()[1].getMethodName());
         homePageElements.usernameField(driver).click();
         homePageElements.usernameField(driver).sendKeys("username");
@@ -37,7 +31,7 @@ public class NegativeScenariosTests extends driverSetUp {
     }
 
     @Test(priority = 3)
-    public void emptyUsernameTest() throws InterruptedException {
+    public void emptyUsernameTest() {
         System.out.println("Test Executed: " + Thread.currentThread().getStackTrace()[1].getMethodName());
         homePageElements.passwordField(driver).click();
         homePageElements.passwordField(driver).sendKeys("password");
@@ -47,7 +41,7 @@ public class NegativeScenariosTests extends driverSetUp {
     }
 
     @Test(priority = 4)
-    public void emptyPasswordTest() throws InterruptedException {
+    public void emptyPasswordTest() {
         System.out.println("Test Executed: " + Thread.currentThread().getStackTrace()[1].getMethodName());
         homePageElements.usernameField(driver).click();
         homePageElements.usernameField(driver).sendKeys("username");
