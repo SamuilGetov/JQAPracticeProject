@@ -22,7 +22,7 @@ public class driverSetUp {
     public static homePageElements pageHome;
 
     @BeforeTest
-    public void setUp() throws InterruptedException {
+    public void setUp()  {
         // Will be run once before all other tests i.e. they will then inherit the driver
         pageHome = new homePageElements();
         pageElements = new homePageElements();
@@ -66,8 +66,8 @@ public class driverSetUp {
         homePageElements.homeButton(driver).isDisplayed();
     }
 
-    @AfterTest
-    public void cleanup() {
-        driver.quit();
-    }
+//    @AfterTest
+//    public void cleanup() {
+//        driver.quit();
+//    }
 }
