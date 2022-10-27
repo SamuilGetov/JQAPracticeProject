@@ -30,10 +30,10 @@ public class loginCredentials {
     public void enterLogInCredentials() {
         driver.findElement(usernameField).click();
         driver.findElement(usernameField).clear();
-        driver.findElement(usernameField).sendKeys(username);
+        driver.findElement(usernameField).sendKeys(this.username);
         driver.findElement(passwordField).click();
         driver.findElement(passwordField).clear();
-        driver.findElement(passwordField).sendKeys(password);
+        driver.findElement(passwordField).sendKeys(this.password);
         driver.findElement(logInButton).click();
     }
 
